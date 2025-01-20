@@ -12,15 +12,10 @@ def main_planner(guests: int) -> None:
     this function organizes the tea party planning and prints the results
     after calling the functions below.
     """
-
-    tea_count = tea_bags(guests)
-    treat_count = treats(guests)
-    total_cost = cost(tea_count, treat_count)
-
     print(f"A Cozy Tea party for {guests} People!")
-    print(f"Tea Bags: {tea_count}")
-    print(f"Treats: {treat_count}")
-    print(f"Cost: ${total_cost}")
+    print(f"Tea Bags: {tea_bags(guests)}")
+    print(f"Treats: {treats(guests)}")
+    print(f"Cost: ${cost(tea_bags(guests), treats(guests))}")
 
     return None
 
